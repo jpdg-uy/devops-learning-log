@@ -1,54 +1,42 @@
 #!/usr/bin/env bash
 set -euo pipefail
+
 WEEK_NUM="${1:-}"
-if [[ -z "$WEEK_NUM" ]]; then
-  echo "Usage: $0 <week-number"; exit 1
+
+# Validate input is an integer like 2, 03, 12, etc.
+if ! [[ "$WEEK_NUM" =~ ^[0-9]+$ ]]; then
+  echo "Usage: $0 <week-number (integer)>"
+  exit 1
 fi
-WEEK_DIR="notes/week-$(printf "%02d" "$WEEK_NUM")"
+
+WEEK_PADDED="$(printf "%02d" "$WEEK_NUM")"
+WEEK_DIR="notes/week-${WEEK_PADDED}"
 mkdir -p "$WEEK_DIR"
 
 cat > "$WEEK_DIR/00-week-plan.md" <<TPL
-# Week $(printf "%02d" "WEEK_NUM") - Plan
-
+# Week ${WEEK_PADDED} – Plan
 
 ## Objectives
-
--
-
-
+- 
 
 ## Deliverables
-
--
-
+- 
 
 ## Checklist
-
-- [ ]
-
+- [ ] 
 TPL
 
-for d in 1 2 3 4 5; do
- cat > "$WEEK_DIR/0${d}-day${d}.md" <<TPL
-# Week $(printf "%02d" "$WEEK_NUM") - Day ${d}
-
+cat > "$WEEK_DIR/week-summary.md" <<TPL
+# Week ${WEEK_PADDED} – Summary
 
 ## What I learned
-
--
-
+- 
 
 ## Hands-on
-
--
-
+- 
 
 ## Notes / Links
-
--
-
+- 
 TPL
 
-done
-
-echo "Scaffolded $WEEK_DIR with daily templates."
+echo "Scaffolded ${WEEK_DIR} (plan + summary)."
