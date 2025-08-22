@@ -1,6 +1,6 @@
 # DevOps Learning Log
 
-Tis repo documents my 24-week DevOps/Cloud path:
+This repo documents my 24-week DevOps/Cloud path:
 - Month 1: Foundations (Linux, Git, AWS basics, scripting)
 - Month 2: Containers + CI/CD fundamentals
 - Month 3: IaC (Terraform) + Cloud networking
