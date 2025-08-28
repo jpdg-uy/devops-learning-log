@@ -1,0 +1,4 @@
+2025-08-10 12:00:01 INFO user=john action=login
+2025-08-10 12:01:10 ERROR user=john action=save code=500
+2025-08-10 12:02:00 INFO user=alice action=login
+2025-08-10 12:03:20 WARN user=alice action=upload size=2048
