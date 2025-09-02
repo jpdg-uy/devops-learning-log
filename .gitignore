@@ -1,0 +1,69 @@
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.envrc
+.venv/
+venv/
+Pipfile.lock
+poetry.lock
+
+# --- Node / NPM (if used for frontend or infra dashboards) ---
+node_modules/
+npm-debug.log*
+
+# --- Terraform ---
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+*.tfvars
+*.tfvars.json
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# --- Ansible ---
+*.retry
+
+# --- AWS CLI / Credentials ---
+.aws/
+*.pem
+*.key
+
+# --- Docker ---
+*.pid
+*.log
+docker-compose.override.yml
+
+# --- Secrets (general) ---
+*.crt
+*.csr
+*.key
+*.env
+secrets.yaml
+secrets.yml
+
+# --- Build / Binaries ---
+dist/
+build/
+*.out
+*.exe
+*.dll
+*.so
+
+# --- Logs ---
+*.log
+logs/
+
