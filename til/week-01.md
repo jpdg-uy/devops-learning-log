@@ -20,7 +20,10 @@
 - [ ] Organize repo folders (`til/`, `projects/`, `cheatsheets/`).
 - [ ] Commit structure and docs.
 - [ ] Create a test branch, commit, and open PR.
+
 - Notes:
+
+	Made the decission to install GH (GitHub console application in order to manage PRs and issues )
 
 ### Day 3
 - [ ] Merge PR into `main`.
